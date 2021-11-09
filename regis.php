@@ -12,30 +12,30 @@
 
 include 'dbcon.php';
 
-error_reporting(0);
+// error_reporting(0);
 
-session_start();
+// session_start();
 
-if (isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
+// if (isset($_SESSION['username'])) {
+//     header("Location: index.php");
+// }
 
 if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
 	$email = $_POST['email'];
     $mobile = $_POST['mobile'];
-	$password = md5($_POST['password']);
-	$cpassword = md5($_POST['cpassword']);
+	$password =($_POST['password']);
+	$cpassword =($_POST['cpassword']);
 
 	if ($password == $cpassword) {
-		$sql = "SELECT * FROM users WHERE email='$email'";
-		$result = mysqli_query($conn, $sql);
-		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO users (username, email, mobile, password)
+		$sql = "SELECT * FROM registration WHERE email='$email'";
+		$result = mysqli_query($con, $sql);
+		if ($result) {
+			$sql = "INSERT INTO registration (username, email, mobile, password)
 					VALUES ('$username', '$email','$mobile', '$password')";
-			$result = mysqli_query($conn, $sql);
+			$result = mysqli_query($con, $sql);
 			if ($result) {
-				echo "<script>alert('Wow! User Registration Completed.')</script>";+
+				echo "<script>alert('Wow! User Registration Completed.')</script>";
 				$username = "";
 				$email = "";
 				$_POST['password'] = "";
@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
                             <i class="fa fa-lock fa-2x"></i>
                         </span>
                     </div>
-                    <input name="cpassword" class="form-control" placeholder="Confirm password" type="password" required>
+                    <input name="cpassword" class="form-control" placeholder="Confirm Password" type="password" required>
                 </div><br>
                 <div class="form-group  d-grid gap-2 ">
                     <button name="submit" type="submit" class=" btn btn-primary btn-block btn-lg ">
