@@ -56,61 +56,7 @@ body {
     opacity: 1;
   }
   
-  /*--------------------------------------------------------------
-  # Preloader
-  --------------------------------------------------------------*/
-  #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: #fff;
-  }
-  
-  #preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #a168c2;
-    border-top-color: #fff;
-    border-bottom-color: #fff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: animate-preloader 1s linear infinite;
-    animation: animate-preloader 1s linear infinite;
-  }
-  
-  @-webkit-keyframes animate-preloader {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes animate-preloader {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  /*--------------------------------------------------------------
-  # Disable aos animation delay on mobile devices
-  --------------------------------------------------------------*/
-  @media screen and (max-width: 768px) {
-    [data-aos-delay] {
-      transition-delay: 0 !important;
-    }
-  }
- /*--------------------------------------------------------------
+ /*------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
   #header {
@@ -137,9 +83,6 @@ body {
     max-height: 40px;
   }
   
-  /**
-  * Get Startet Button 
-  */
   .get-started-btn {
     margin-left: 22px;
     background: #ac5fcf;
@@ -162,12 +105,7 @@ body {
     }
   }
   
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-  /**
-  * Desktop Navigation 
-  */
+  
   .navbar {
     padding: 0;
   }
@@ -265,9 +203,7 @@ body {
   .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
     margin: 15px;
   }
-  /*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
+ 
   #hero {
     width: 100%;
     height: 80vh;
@@ -385,27 +321,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: #37423b;
   }
-  
-  .breadcrumbs {
-    margin-top: 73px;
-    text-align: center;
-    background: #5fcf80;
-    padding: 30px 0;
-    color: #fff;
-  }
-  @media (max-width: 992px) {
-    .breadcrumbs {
-      margin-top: 63px;
-    }
-  }
-  .breadcrumbs h2 {
-    font-size: 32px;
-    font-weight: 500;
-  }
-  .breadcrumbs p {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
+ 
   
   /*--------------------------------------------------------------
   # About
@@ -555,9 +471,18 @@ body {
     border-radius: 16px;
     margin-left: 3cm;
   }
-  /*--------------------------------------------------------------
-  # Courses
-  --------------------------------------------------------------*/
+ #head{
+  text-align: center;
+ 
+ }
+ #addadmin{
+   text-align: center;
+   margin-top: 5%;
+ }
+.table{
+     align-items: center;
+
+ }
   .courses .course-item {
     border-radius: 5px;
     border: 1px solid #eef0ef;
@@ -722,167 +647,10 @@ body {
     }
   }
   
-  /*--------------------------------------------------------------
-  # Events
-  --------------------------------------------------------------*/
-  .events .card {
-    border: 0;
-    padding: 0 30px;
-    margin-bottom: 60px;
-    position: relative;
-  }
-  .events .card-img {
-    width: calc(100% + 60px);
-    margin-left: -30px;
-    overflow: hidden;
-    z-index: 9;
-    border-radius: 0;
-  }
-  .events .card-img img {
-    max-width: 100%;
-    transition: all 0.3s ease-in-out;
-  }
-  .events .card-body {
-    z-index: 10;
-    background: #fff;
-    border-top: 4px solid #fff;
-    padding: 30px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    margin-top: -60px;
-    transition: 0.3s;
-  }
-  .events .card-title {
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .events .card-title a {
-    color: #37423b;
-    transition: 0.3s;
-  }
-  .events .card-text {
-    color: #5e5e5e;
-  }
-  .events .read-more a {
-    color: #777777;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
-    transition: 0.3s;
-  }
-  .events .read-more a:hover {
-    color: #5fcf80;
-  }
-  .events .card:hover img {
-    transform: scale(1.1);
-  }
-  .events .card:hover .card-body {
-    border-color: #5fcf80;
-  }
-  .events .card:hover .card-body .card-title a {
-    color: #5fcf80;
-  }
   
-  /*--------------------------------------------------------------
-  # Pricing
-  --------------------------------------------------------------*/
-  .pricing .box {
-    padding: 20px;
-    background: #fff;
-    text-align: center;
-    border: 1px solid #eef0ef;
-    border-radius: 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .pricing h3 {
-    font-weight: 400;
-    margin: -20px -20px 20px -20px;
-    padding: 20px 15px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #777777;
-    background: #f8f8f8;
-  }
-  .pricing h4 {
-    font-size: 36px;
-    color: #5fcf80;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 20px;
-  }
-  .pricing h4 sup {
-    font-size: 20px;
-    top: -15px;
-    left: -3px;
-  }
-  .pricing h4 span {
-    color: #bababa;
-    font-size: 16px;
-    font-weight: 300;
-  }
-  .pricing ul {
-    padding: 0;
-    list-style: none;
-    color: #444444;
-    text-align: center;
-    line-height: 20px;
-    font-size: 14px;
-  }
-  .pricing ul li {
-    padding-bottom: 16px;
-  }
-  .pricing ul i {
-    color: #5fcf80;
-    font-size: 18px;
-    padding-right: 4px;
-  }
-  .pricing ul .na {
-    color: #ccc;
-    text-decoration: line-through;
-  }
-  .pricing .btn-wrap {
-    margin: 20px -20px -20px -20px;
-    padding: 20px 15px;
-    background: #f8f8f8;
-    text-align: center;
-  }
-  .pricing .btn-buy {
-    background: #5fcf80;
-    display: inline-block;
-    padding: 8px 35px;
-    border-radius: 50px;
-    color: #fff;
-    transition: none;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    transition: 0.3s;
-  }
-  .pricing .btn-buy:hover {
-    background: #3ac162;
-  }
-  .pricing .featured h3 {
-    color: #fff;
-    background: #5fcf80;
-  }
-  .pricing .advanced {
-    width: 200px;
-    position: absolute;
-    top: 18px;
-    right: -68px;
-    transform: rotate(45deg);
-    z-index: 1;
-    font-size: 14px;
-    padding: 1px 0 3px 0;
-    background: #5fcf80;
-    color: #fff;
-  }
-  
-  /*--------------------------------------------------------------
+  /*-
   # Contact
-  --------------------------------------------------------------*/
+-*/
   .contact {
     padding-top: 5px;
   }
@@ -1011,7 +779,7 @@ body {
   
   /*--------------------------------------------------------------
   # Footer
-  --------------------------------------------------------------*/
+  -*/
   #footer {
     color: #37423b;
     font-size: 14px;
@@ -1131,18 +899,18 @@ body {
     color: #5fcf80;
   }
   #footer .social-links a {
+    align-items: center;
     font-size: 18px;
     display: inline-block;
     background: #5fcf80;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
-    margin-right: 4px;
+    margin-left: 10%;
     border-radius: 50%;
     text-align: center;
     width: 36px;
     height: 36px;
-    transition: 0.3s;
   }
   #footer .social-links a:hover {
     background: #3ac162;
