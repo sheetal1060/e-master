@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>registration</title>
+  <title>home</title>
   <?php include "css/index.php" ?>
   <?php include "links/links.php" ?>
 
@@ -63,7 +63,7 @@
               people.</button></a>
         </div>
       </div>
-      <div class="col-6" z-index=1>
+      <div class="col-6">
 
         <img src="imgandjs/images/g2.jpg" alt="learn skills" height="250" width="350">
         <div class="options">
@@ -111,8 +111,8 @@
           You can help many student by create a course vedio, <br>and reach students across the world:-</h2>
       </div>
       <div class="col-6">
-        <button type="button" class="btn postbtn  btn-light btn-lg"><a class="optiontext">
-            Teach on Mentor
+     <button type="button" class="btn postbtn  btn-light btn-lg"><a class="optiontext" href='admin.php'>
+            Teach on e-master
           </a></button>
       </div>
     </div>
