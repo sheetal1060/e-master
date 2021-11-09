@@ -14,7 +14,6 @@
       <nav id="navbar" class="navbar order-last order-lg-0 ">
         <ul>
           <li><a class="active" href="index.php">Home</a></li>
-          <li><a href="courses.php">Courses</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
