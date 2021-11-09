@@ -1,46 +1,17 @@
 <?php
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>registration</title>
+    <title>log in</title>
     <?php include "css/style.php" ?>
     <?php include "links/links.php" ?>
 </head>
 
 <body>
-    <?php
-    include 'dbcon.php';
-    if (isset($_POST['submit'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
 
-        $email_search = "select * from registration where email='$email'";
-        $query = mysqli_query($con, $email_search);
-
-        $email_count = mysqli_num_rows($query);
-
-        if ($email_count) {
-            $email_pass = mysqli_fetch_assoc($query);
-            $db_pass = $email_pass['password'];
-
-            $_SESSION['email']=$email_pass['username'];
-
-            $pass_decode = password_verify($password, $db_pass);
-            if ($pass_decode) {
-                echo "login sucessful";
-                header('location:home.php');
-            } else {
-                echo "password incorrect";
-            }
-        } else {
-            echo "Invalid email";
-        }
-    }
-
-    ?>
     <div class="card  bg-light">
         <article class="card-body mx-auto" style="width: 400px;">
             <h3 class="card-title mt-3 text-center"> CREATE ACCOUNT</h3>
@@ -52,7 +23,7 @@ session_start();
             <h5 class="divider-text">
                 <span class="bg-light">OR</span>
             </h5>
-            <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?> " method="POST">
+            <form action="loginCredentials.php" method="POST">
                 <div class="form-group input-group ">
                     <div class="input-group-prepend">
                         <span class="input-group-text">
@@ -66,7 +37,7 @@ session_start();
                             <i class="fa fa-lock fa-2x"></i>
                         </span>
                     </div>
-                    <input name="password" class="form-control" placeholder="Create password" type="password" required>
+                    <input name="password" class="form-control" placeholder="Password" type="text" required>
                 </div><br>
 
                 <div class="form-group  d-grid gap-2 ">
