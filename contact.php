@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>registration</title>
+  <title>contact</title>
   <?php include "css/index.php" ?>
   <?php include "links/links.php" ?>
 
