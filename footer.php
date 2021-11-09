@@ -47,25 +47,11 @@
         </ul>
       </div>
 
-      <div class="col-lg-4 col-md-6 footer-newsletter">
-        <h4>Join Us</h4>
-        <p>connect to us by subscribing.</p>
-        <form action="" method="post">
-          <input type="email" name="email"><input type="submit" value="Subscribe">
-        </form>
-      </div>
-
     </div>
   </div>
 </div>
 
-<div class="container d-md-flex py-4">
-
-  <div class="me-md-auto text-center text-md-start">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
-    </div>
-  </div>
+<div class="container d-md-flex py-4" text-align="center" align-items="center">
   <div class="social-links text-center text-md-right pt-3 pt-md-0">
     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
